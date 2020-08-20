@@ -21,5 +21,5 @@ urlpatterns = [
     path('admin/', admin.site.urls,name="Admin"),
     path('trans/',TransView.as_view(),name="Transactions"),
     path(r'^transdate/(?P<datetime>\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}.\d{3}Z)/$',TransViewDate.as_view(),name="TransactionsDate"),
-    # path("o/", include('oauth2_provider.urls', namespace='oauth2_provider')),
+    path("o/", include('oauth2_provider.urls', namespace='oauth2_provider')),
 ]
